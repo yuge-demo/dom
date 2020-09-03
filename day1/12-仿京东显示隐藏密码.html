@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="./font_xqywfyskda//iconfont.css">
+      <style>
+            .box {
+                  margin: 100px;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="box">
+            <label>
+                  <span class="iconfont icon-biyan" id="eye"></span>
+            </label>
+            <input type="password" name="" id="" id="pwd" />
+      </div>
+      <script>
+            var eye = document.getElementById('eye');
+            var pwd = document.getElementById("pwd")
+            var flag = 0;
+            eye.onclick = function () {
+                  if (flag = 0) {
+                        pwd.type = "text"
+                        eye.class = "iconfont icon-biyan"
+                        flag = 1
+                  } else {
+                        eye.type = "password"
+                        pwd.src = "icon-yanjing_huaban1"
+                        flag = 0
+                  }
+            }
+      </script>
+</body>
+
+</html>

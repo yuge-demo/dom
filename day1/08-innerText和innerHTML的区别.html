@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div id="div"></div>
+      <script>
+            // innerHTML和innerText的区别
+            //1.innerText 不识别 html标签 非标准 去除空格和换行
+            var div = document.querySelector("#div")
+            div.innerText = "<strong>现在是</strong>" + getDate();
+            div.innerHTML = "<strong>现在是</strong>" + getDate();
+
+            //2.innerHTML和innerText识别html标签W3C标准 保留空格和换行的
+            //这两个属性是可读写的 可以获取元素里面的内容
+            function getDate() {
+                  var date = new Date();
+                  var year = date.getFullYear();
+                  var month = date.getMonth();
+                  var dates = date.getDate();
+                  return year + "年" + month + "月" + dates + "日"
+            }
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <div id="time"> 2020.08-16</div>
+      <script>
+            //1.因为我们文档页米那从上往下加载，所以先得有标签，所以我们script写到标签下面
+            //2.get 获得 element 元素by 通过驼峰命名法
+            //3.参数id是大小学敏感的字符串
+            var time = document.getElementById("time")
+            console.log(time)
+            console.log(typeof (time))
+            //查看属性的方法
+            console.dir()
+      </script>
+</body>
+
+</html>

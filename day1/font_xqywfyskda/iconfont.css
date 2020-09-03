@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1597739650064'); /* IE9 */
+  src: url('iconfont.eot?t=1597739650064#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOoAAsAAAAAB5wAAANbAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCeIJWATYCJAMMCwgABCAFhG0HQRunBlFUTcJkPw5j50koQqMSmnnzNr8Rzyjc38XD19jvz91dRDSJRoteLTEk0UTUkCzRAtMhVDJJ9P8S3v/q0q8AoZICB4gnBNmSfb7nkwwqAW6dAGgDgK1bxyYC6b8Rh9Om+Py25bT25i4MMA4o0LEGRVZAAXEgDbrLl0YmXDxMoN6whdBaW08/hCjAqECcGTqBEMuqDDSGWqE6srD0oX0C1ab79BLAA/98/IeiCCGpysDErdNWCg3fsX/VvK6yzjglkG3nRrWMjBmgELtR7w5/mZ3hr77WBgxXVitC2ipRGS5t9NUX/eElohqobwQTaS7xHYuFBN/qIglkUO028tdA8mRGTdgEKeuxEShyZd259OTk9bN3HEoAl1/+2P/5c1FS0pEjYYcOwbrExOPzag6tO7wzuf5B58JDhw+Hy3T+2U+l4PIeRejWlzmLeI8eTcp7UV+76fqVVz8PfvzYfyz106eBnV+Gjp6Y/vx58IsQm//k48fBsHUXnu18cQmdeV92/W3J+tsyUfELiIsJaiopndm7c0zxY/57p2FW3IySwHX3QgL8kJK4qTh8aViRjK97MDN1k2//4Lk/r5vbGkuD9Ag9qLSxKfb3m9aagPPUmQ9r42lR+NJwWHg79v3uhawKeLGhXNh2qf18w6pY83LNghgP3fTSF5yjPmjmnDTpxU+9Q48yKjIeZUbce358D6aBoXndbyYA+Sbt+EffUXfZsXQquua/8AJeyeN6bi6m+UHtHfiCP+It3TCgbBQgkwsyfZkak60bZRLqYZBKFmz3e7m+q6kn1OrSSGoMIas1QizUGVRpMItqtRZRb1r78gYdHP6i1GHK5gSh1SUkzZ6QtXpFLNRfqNLtH6q1hj/qbUf8hg3GwghrdhiRjGJlOTZUwTXkkGGisZfpi03imApOG2SOayRwYV6BW2hnnDlbTHGX6EVSalhzhA+3Jccx0xTYcoSXqTLPI6VVlZ+vxV6UpwofhFnlYAiJoTDFcphBJXAa7SyFee/vxegWMxHOQMtadBDjcBm9Y4XyFEwgtmv5pJZXeca1hK6IJGkwjUPwwdoSN2PCrIBZ8X5ejErK41mQtlTJz9ppU7V5x+t9z7cL6oFpOVLkKKoOjeWER+MZXoPrU57FRCG8EAAA') format('woff2'),
+  url('iconfont.woff?t=1597739650064') format('woff'),
+  url('iconfont.ttf?t=1597739650064') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1597739650064#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-biyan:before {
+  content: "\e611";
+}
+
+.icon-yanjing_huaban1:before {
+  content: "\e663";
+}
+

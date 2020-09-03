@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+</head>
+
+<body>
+      <ul>
+            <li>记事本1</li>
+            <li>记事本2</li>
+            <li>记事本3</li>
+            <li>记事本4</li>
+            <li>记事本5</li>
+      </ul>
+      <ol id="ol">
+            <li>DELL(1)</li>
+            <li>DELL(2)</li>
+            <li>DELL(3)</li>
+            <li>DELL(4)</li>
+            <li>DELL(5)</li>
+      </ol>
+      <script>
+            var ul = document.getElementsByName("li")
+            console.log(ul)
+            var ol = document.getElementById("ol")
+            console.log(ol.getElementsByTagName("li"))
+      </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            #btn {
+                  color: aqua;
+                  font-size: 10px;
+                  background-color: burlywood;
+            }
+
+            #div {
+                  width: 330px;
+                  height: 30px;
+                  line-height: 30px;
+                  background-color: burlywood;
+            }
+
+            #p {
+                  margin-top: 20px;
+                  background-color: burlywood;
+                  width: 330px;
+                  line-height: 30px;
+
+            }
+      </style>
+</head>
+
+<body>
+      <button id="btn">按钮</button>
+      <div id="div">当前时间是</div>
+      <p id="p"></p>
+      <script>
+            var btn = document.querySelector("#btn")
+            var div = document.querySelector("#div")
+            var p = document.querySelector("#p")
+            // p.innerText = getDate(); 
+            p.innerHTML = getDate();
+
+
+            btn.onclick = function () {
+                  div.innerHTML = getDate();
+            }
+
+            function getDate() {
+                  var date = new Date();
+                  var year = date.getFullYear();
+                  var month = date.getMonth();
+                  var dates = date.getDate();
+                  let hours = date.getHours(); //获取小时
+                  let minutes = date.getMinutes(); //获取分钟
+                  let seconds = date.getSeconds(); //获取秒
+
+                  var arr = ['星期日', "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
+                  var day = date.getDay();
+                  return "今天是：" + year + "年" + month + "月" + dates + "日" + hours + "时" + minutes + "分" + seconds + "秒" +
+                        arr[day];
+            }
+      </script>
+</body>
+
+</html>

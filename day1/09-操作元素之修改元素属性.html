@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .images {
+                  position: absolute;
+                  left: 70px;
+                  top: 50px;
+            }
+      </style>
+</head>
+
+<body>
+      <button id="tj">添加购物车</button>
+      <button id="qk">清空购物车</button>
+      <img src="./image//icon-cart-hover.png" class="images" alt="">
+      <script>
+            //修改元素属性 src
+            //1.获取元素
+            var tj = document.getElementById("tj");
+            var qk = document.getElementById("qk");
+            var img = document.querySelector("img")
+            //2.注册事件   处理程序
+            qk.onclick = function () {
+                  img.src = "./image/icon-cart.png"
+            }
+            tj.onclick = function () {
+                  img.src = "./image/icon-cart-hover.png"
+            }
+      </script>
+</body>
+
+</html>
