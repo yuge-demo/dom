@@ -6,24 +6,22 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <style>
-            .box {
+            div {
                   width: 200px;
                   height: 200px;
                   background-color: pink;
+                  border: 10px solid red;
                   padding: 10px;
             }
       </style>
 </head>
 
 <body>
-      <div class="box" style="width: 200px;"></div>
+      <div></div>
       <script>
-            //offset 与 style 的区别
-            var box = document.querySelector('.box');
-            console.log(box.offsetWidth);
-            console.log(box.style.width);
-            box.offsetWidth = '300px';
-            // box.style.width = '300px'
+            // client 宽度和我们offsetWidth最大的区别就是不包含边框
+            var div = document.querySelector('div');
+            console.log(div.clientWidth)
       </script>
 </body>
 

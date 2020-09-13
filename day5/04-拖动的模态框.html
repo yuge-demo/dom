@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
-<head>
+<head lang="en">
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Document</title>
+      <title></title>
       <style>
+            .login-header {
+                  width: 100%;
+                  text-align: center;
+                  height: 30px;
+                  font-size: 24px;
+                  line-height: 30px;
+            }
+
             ul,
             li,
             ol,
@@ -26,14 +33,6 @@
                   margin: 0px;
             }
 
-            .login-header {
-                  width: 100%;
-                  text-align: center;
-                  height: 30px;
-                  font-size: 24px;
-                  line-height: 30px;
-            }
-
             .login {
                   display: none;
                   width: 512px;
@@ -42,10 +41,10 @@
                   border: #ebebeb solid 1px;
                   left: 50%;
                   top: 50%;
-                  transform: translate(-50%, -50%);
-                  background-color: #ffffff;
+                  background: #ffffff;
                   box-shadow: 0px 0px 20px #ddd;
                   z-index: 9999;
+                  transform: translate(-50%, -50%);
             }
 
             .login-title {
@@ -120,7 +119,7 @@
                   font-size: 12px;
                   right: -20px;
                   top: -30px;
-                  background-color: #ffffff;
+                  background: #ffffff;
                   border: #ebebeb solid 1px;
                   width: 40px;
                   height: 40px;
@@ -130,12 +129,10 @@
 </head>
 
 <body>
-      <div class="login-header">
-            <a href="javascript:;">点击，弹出登录框</a>
-      </div>
-      <div class="login" id="login">
+      <div class="login-header"><a id="link" href="javascript:;">点击，弹出登录框</a></div>
+      <div id="login" class="login">
             <div id="title" class="login-title">登录会员
-                  <span><a id="closeBtn" class="close-login" href="javascript:void(0)">关闭</a></span>
+                  <span><a id="closeBtn" href="javascript:void(0);" class="close-login">关闭</a></span>
             </div>
             <div class="login-input-content">
                   <div class="login-input">
@@ -148,21 +145,46 @@
                               class="list-input">
                   </div>
             </div>
-            <div id="loginBtn" class="login-button">
-                  <a href="javascript:void[0]" id="login-button-submit">登录会员</a>
+            <div id="loginBtn" class="login-button"><a href="javascript:void(0);" id="login-button-submit">登录会员</a>
             </div>
       </div>
+
       <!-- 遮盖层 -->
       <div id="bg" class="login-bg"></div>
       <script>
-            //1.获取元素
+            // 1. 获取元素
             var login = document.querySelector('.login');
             var mask = document.querySelector('.login-bg');
             var link = document.querySelector('#link');
             var closeBtn = document.querySelector('#closeBtn');
             var title = document.querySelector('#title');
-            //2.点击弹出层这个链接 link 让 mask 和login显示出来
-            
+            // 2. 点击弹出层这个链接 link  让mask 和login 显示出来
+            link.addEventListener('click', function () {
+                  mask.style.display = 'block';
+                  login.style.display = 'block';
+            })
+            // 3. 点击 closeBtn 就隐藏 mask 和 login 
+            closeBtn.addEventListener('click', function () {
+                  mask.style.display = 'none';
+                  login.style.display = 'none';
+            })
+            // 4. 开始拖拽
+            // (1) 当我们鼠标按下， 就获得鼠标在盒子内的坐标
+            title.addEventListener('mousedown', function (e) {
+                  var x = e.pageX - login.offsetLeft;
+                  var y = e.pageY - login.offsetTop;
+                  // (2) 鼠标移动的时候，把鼠标在页面中的坐标，减去 鼠标在盒子内的坐标就是模态框的left和top值
+                  document.addEventListener('mousemove', move)
+
+                  function move(e) {
+                        login.style.left = e.pageX - x + 'px';
+                        login.style.top = e.pageY - y + 'px';
+                  }
+                  // (3) 鼠标弹起，就让鼠标移动事件移除
+                  document.addEventListener('mouseup', function () {
+                        document.removeEventListener('mousemove', move);
+                  })
+            })
       </script>
 </body>
 
