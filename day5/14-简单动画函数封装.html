@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            div {
+                  position: absolute;
+                  left: 0;
+                  width: 100px;
+                  height: 100px;
+                  background-color: pink;
+            }
+
+            span {
+                  position: absolute;
+                  left: 0;
+                  top: 200px;
+                  width: 150px;
+                  height: 150px;
+                  background-color: purple;
+            }
+      </style>
+</head>
+
+<body>
+      <div></div>
+      <span>七月与安生</span>
+      <script>
+            var div = document.querySelector('div')
+            var span = document.querySelector('span')
+
+            function a(obj, target) {
+                  var timer = setInterval(function () {
+                        if (obj.offsetLeft >= target) {
+                              clearInterval(timer)
+                        }
+                        obj.style.left = obj.offsetLeft + 1 + 'px';
+                  }, 30)
+            }
+
+            a(div, 200)
+            a(span , 200)
+      </script>
+</body>
+
+</html>

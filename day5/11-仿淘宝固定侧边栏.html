@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <style>
+            .slider-bar {
+                  position: absolute;
+                  left: 50%;
+                  top: 300px;
+                  margin-left: 600px;
+                  width: 45px;
+                  height: 130px;
+                  background-color: pink;
+            }
+
+            .w {
+                  width: 1200px;
+                  margin: 10px auto;
+            }
+
+            .header {
+                  height: 250px;
+                  background-color: purple;
+            }
+
+            .banner {
+                  height: 250px;
+                  background-color: skyblue;
+            }
+
+            .main {
+                  height: 100px;
+                  background-color: yellowgreen;
+            }
+
+            span {
+                  display: none;
+                  position: absolute;
+                  bottom: 0;
+            }
+      </style>
+</head>
+
+<body>
+      <div class="slider-bar">
+            <span class="goBack">返回顶部</span>
+      </div>
+      <div class="header w">头部区域</div>
+      <div class="banner w">banner区域</div>
+      <div class="main w">主体区域</div>
+      <script>
+            //1.获取元素
+            var sliderbar = document.querySelector('.slider-bar')
+      </script>
+</body>
+
+</html>
